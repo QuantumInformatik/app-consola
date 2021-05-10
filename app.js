@@ -1,22 +1,17 @@
 
-const fs = require('fs');
+const {crearArchivoPromise, crearArchivoAsyncAwait} = require('./helpers/multiplicar')
 
-const base = 3;
+const base = 5;
 console.clear()
-console.log("Tabla del: "+base)
 
-let salida = '';
+crearArchivoAsyncAwait(base)
+    .then(msg =>{
+        console.log(msg+" creado")
+    })
+    .catch(error => {
+        console.log(error)
+    });
 
-for(i=1;i<=10;i++){
-    salida+= `${base} x ${i} = ${base*(i)}\n`
-}
-
-fs.writeFile(`tabla-${base}.txt`,salida, (err)=>{
-    if(err) throw err;
-    console.log('archivo creado')
-})
-
-console.log(salida)
 
 
 
