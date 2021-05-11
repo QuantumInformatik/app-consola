@@ -40,7 +40,7 @@ const crearArchivoPromise = (base = 5) => {
 
 
 // con async await
-const crearArchivoAsyncAwait = async(base = 5) => {
+const crearArchivoAsyncAwait = async(base = 5, listar) => {
     try {
 
         console.log("Tabla del: ", base)
@@ -52,8 +52,13 @@ const crearArchivoAsyncAwait = async(base = 5) => {
         }
         fs.writeFileSync(`tabla-${base}.txt`, salida)
 
+        console.log("l", listar)
+        if (listar) {
+            console.log(salida);
 
-        console.log(salida);
+        }
+
+
         return `tabla-${base}.txt`;
 
     } catch (error) {
