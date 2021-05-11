@@ -2,29 +2,23 @@
 https://github.com/Klerith/node-intro-javascript/blob/main/promesas.js
 */
 
-const {crearArchivoPromise, crearArchivoAsyncAwait} = require('./helpers/multiplicar')
+const { crearArchivoPromise, crearArchivoAsyncAwait } = require('./helpers/multiplicar')
+const argv = require('yargs').argv
 
-const base = 5;
+// const base = 5;
 console.clear()
 
+console.log(process.argv);
+console.log(argv)
 
-const [,,arg3='base=5'] = process.argv
-const [,baseArg=5] = arg3.split('=')
-console.log(baseArg)
-
-
-
-crearArchivoAsyncAwait(baseArg)
-    .then(msg =>{
-        console.log(msg+" creado")
-    })
-    .catch(error => {
-        console.log(error)
-    });
+console.log('base: yargs ', argv.base)
 
 
 
-
-
-
-
+// crearArchivoAsyncAwait(baseArg)
+//     .then(msg =>{
+//         console.log(msg+" creado")
+//     })
+//     .catch(error => {
+//         console.log(error)
+//     });

@@ -18,7 +18,8 @@
     },
     "homepage": "https://github.com/QuantumInformatik/app-consola#readme",
     "dependencies": {
-        "colors": "^1.4.0"
+        "colors": "^1.4.0",
+        "yargs": "^17.0.1"
     },
     "devDependencies": {}
 }
