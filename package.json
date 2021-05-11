@@ -1,0 +1,24 @@
+{
+    "name": "04-bases-node",
+    "version": "1.0.0",
+    "description": "Tabla de multiplicar con archivo de texto",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "base3": "node app --base=3"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/QuantumInformatik/app-consola.git"
+    },
+    "author": "Juan Alarcon",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/QuantumInformatik/app-consola/issues"
+    },
+    "homepage": "https://github.com/QuantumInformatik/app-consola#readme",
+    "dependencies": {
+        "colors": "^1.4.0"
+    },
+    "devDependencies": {}
+}
