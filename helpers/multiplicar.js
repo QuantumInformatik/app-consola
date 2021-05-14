@@ -42,20 +42,23 @@ const crearArchivoPromise = (base = 5) => {
 
 
 // con async await
-const crearArchivoAsyncAwait = async(base = 5, listar) => {
+const crearArchivoAsyncAwait = async(base = 5, listar, hasta) => {
     try {
 
         console.log("Tabla del: ".green, colors.green(base))
         let salida = '';
+        let consola = '';
 
 
-        for (i = 1; i <= 10; i++) {
-            salida += `${base} ${'x'.green} ${i} ${'='.yellow} ${base*(i)}\n`
+        for (i = 1; i <= hasta; i++) {
+            salida += `${base} ${'x'} ${i} ${'='} ${base*(i)}\n`
+            consola += `${base} ${'x'.green} ${i} ${'='.yellow} ${base*(i)}\n`
+
         }
-        fs.writeFileSync(`tabla-${base}.txt`, salida)
+        fs.writeFileSync(`./salida/tabla-${base}.txt`, salida)
 
         if (listar) {
-            console.log(salida);
+            console.log(consola);
 
         }
 
